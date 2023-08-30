@@ -1,7 +1,7 @@
 
-# Maze Solver Algorithms
+# Puzzle Solving Algorithms
 
-This project consists of three main algorithms to solve mazes:
+This puzzle-solving project compares the usefulness of three seperate algorithms as they navigate their way across a grid. Each cell in the grid is randomly populated with a numeric value that represents a time-cost. The algorithm that can reach the end point with the lowest accumulated score is considered the most effictive puzzle solver:
 - Myopic Algorithm
 - Anthill Algorithm
 - Dijkstra's Algorithm
@@ -9,25 +9,18 @@ This project consists of three main algorithms to solve mazes:
 ## Setup
 
 1. Clone the repository.
-```
-git clone <repository_url>
-```
 
-2. Navigate to the project directory.
-```
-cd <project_directory>
-```
+git clone https://github.com/andrew-collison94/algorithm-comparison.git
 
-3. Install the required packages.
-```
+2. Install the required packages.
+
 pip install -r requirements.txt
-```
 
 ## Algorithms
 
 ### Myopic Algorithm
 
-A right-biased algorithm that works well as long as the grid orientation maintains the same start and end positions it began with. It's named "myopic" because it's aware of its immediate neighbors and nothing else.
+A right-biased algorithm that works well as long as the grid orientation maintains the same start and end positions it began with. It's named "myopic" because it makes decisions based on nothing but its immediate neighbors.
 
 ### Anthill Algorithm
 
@@ -37,6 +30,10 @@ Based on the behavior of ants as they search for food. It simulates a population
 
 A graph-search algorithm that maintains a priority queue to explore cells in order of their distance from the starting point. The edge weights represent the cost to move to a particular cell, and the algorithm strives to minimize this cost.
 
-## Running the Comparison
+## Running the Program
 
-Execute the `comparison()` function to run a comparison between the three algorithms across different grid sizes. This will display a plot showing the performance of each algorithm as the grid size increases.
+Main:
+Execute the 'main()' function to run the specific algorithm set in user_variables.py
+
+Comparison:
+Execute the 'comparison() function to run a comparison between the three algorithms across different grid sizes. This will display a plot showing the performance of each algorithm as the grid size increases.
